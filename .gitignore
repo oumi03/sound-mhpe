@@ -1,0 +1,17 @@
+# Local notes
+TODO_page_improvements.md
+
+# Paper PDF (managed separately)
+paper.pdf
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Misc
+*.log
