@@ -280,8 +280,32 @@
 <!-- End teaser video -->
 
 
-<!-- Paper abstract -->
+<!-- Teaser image -->
 <section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <figure class="image" style="margin-bottom: 1.5rem;">
+          <img src="./static/images/teaser.png" alt="Teaser image" loading="lazy">
+        </figure>
+        <div class="content has-text-justified">
+          <p>
+            We propose SoundMHPE, a sound-based multi-person 3D pose estimation
+            method. Our system adopts an active acoustic sensing approach, where a speaker emits
+            a transmitted signal and the received signal is used for the model input. While existing
+            acoustic pose estimation models are limited to single-person estimation, SoundMHPE
+            enables simultaneous estimation of multiple individuals.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End teaser image -->
+
+
+<!-- Paper abstract -->
+<section class="section hero">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -292,7 +316,7 @@
             This paper presents the first attempt to estimate multi-person 3D poses solely from acoustic signals.
             Estimating the poses of multiple individuals using acoustic signals is inherently challenging due to the superposition of motion-dependent signal variations. Unlike single-person scenarios, the presence of multiple subjects leads to overlapping acoustic signatures, making it difficult to attribute specific signal changes to an individual's pose. Furthermore, the complexity is compounded by inter-person reflections, which introduce intricate propagation delays that obscure the temporal motion-acoustic relationship.
             To address these issues, we propose <b>SoundMHPE</b> (Sound-based Multi-person Human Pose Estimator), a novel encoder-decoder framework consisting of two key components. First, the <b>Acoustic Multi-scale Encoder</b> captures diverse temporal and fine-grained frequency features to isolate subtle acoustic signatures from complex, overlapping signals. Second, the <b>Temporal Pose Decoder</b> employs an attention mechanism to disentangle multi-person information across successive frames. 
-            To validate our approach, we constructed the 6-hour <b>Acoustic Multi-person Pose (AMP)</b> dataset consisting of 432K synchronized frames of multi-person pose and acoustic data, and demonstrated that our \model outperforms baseline models.
+            To validate our approach, we constructed the 6-hour <b>Acoustic Multi-person Pose (AMP)</b> dataset consisting of 432K synchronized frames of multi-person pose and acoustic data, and demonstrated that our SoundMHPE outperforms baseline models.
           </p>
         </div>
       </div>
@@ -300,6 +324,90 @@
   </div>
 </section>
 <!-- End paper abstract -->
+
+
+<!-- Proposed Method -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Proposed Method</h2>
+        <figure class="image" style="margin-bottom: 1.5rem;">
+          <img src="./static/images/framework.png" alt="Proposed framework overview" loading="lazy">
+        </figure>
+        <div class="content has-text-justified">
+          <p>
+            Proposed framework for sound-based multi-person pose estimation. (Top left)
+            SoundMHPE first employs an Acoustic Multi-scale Encoder to generate spectrograms
+            with diverse time&ndash;frequency characteristics and obtain an acoustic feature map. (Top
+            right) Subsequently, in the Temporal Pose Decoder, we assign each individual a set
+            of learnable pose queries. (Bottom) These encoder and decoder modules leverage customized
+            self-attention to jointly model spatio-temporal dynamics, multi-resolution features,
+            and inter/intra-person pose relationships.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Proposed Method -->
+
+
+<!-- Dataset -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Dataset</h2>
+        <figure class="image" style="margin-bottom: 1.5rem;">
+          <img src="./static/images/dataset.png" alt="AMP dataset overview" loading="lazy">
+        </figure>
+        <div class="content has-text-justified">
+          <p>
+            Since we are tackling a novel task for which no existing dataset is available, we
+            constructed the 6-hour Acoustic Multi-person Pose (AMP) dataset. This dataset
+            consists of synchronized acoustic data acquired through active acoustic sensing
+            and 3D coordinate data of multiple individuals. (a,b) Our measurement environment consists of a set of
+            speakers and a microphone for active acoustic sensing, along with motion capture
+            cameras to obtain ground-truth poses. (c) Our AMP dataset consists of 12 male and
+            3 female participants, with heights ranging from 150cm to 181cm. The participants
+            were divided into three groups. For each group, we collected 72 minutes of single-person
+            data, 24 minutes of double-person data, and 24 minutes of triple-person data.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Dataset -->
+
+
+<!-- Results -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <figure class="image" style="margin-bottom: 1.5rem;">
+          <img src="./static/images/results.png" alt="Qualitative results" loading="lazy">
+        </figure>
+        <div class="content has-text-justified">
+          <p>
+            In the double-person scenario, the baseline models struggle to track dynamic &ldquo;twisting&rdquo;
+            motions, whereas SoundMHPE reconstructs them with high fidelity. Similarly, for the
+            triple-person data, SoundMHPE successfully estimates &ldquo;raising both arms&rdquo;, a motion
+            characterized by a small sound reflection area, even when performed alongside a walking
+            individual. We hypothesize that for motions involving subtle acoustic perturbations,
+            such as twisting or arm raising, the integration of fine-grained frequency features via
+            the AME and the explicit modeling of inter- and intra-person dependencies in the TPD
+            are particularly effective.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Results -->
 
 
 <!-- TODO: Uncomment when result images are available -->
