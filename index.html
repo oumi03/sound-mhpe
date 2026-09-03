@@ -118,8 +118,6 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- TODO: Uncomment when More Works section is ready to show -->
-  <!--
   <div class="more-works-container">
     <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
       <i class="fas fa-flask"></i>
@@ -134,15 +132,7 @@
         </button>
       </div>
       <div class="works-list">
-        <a href="https://arxiv.org/abs/2306.09504" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Listening Human Behavior: 3D Human Pose Estimation with Acoustic Signals</h5>
-            <p>First approach to estimate 3D human pose from active acoustic signals using a speaker-microphone pair.</p>
-            <span class="work-venue">CVPR 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/2409.12737" class="work-item" target="_blank">
+        <a href="https://isogawa.ics.keio.ac.jp/projects/acoustic_3dpose_bmvc2024.html" class="work-item" target="_blank">
           <div class="work-info">
             <h5>Acoustic-based 3D Human Pose Estimation Robust to Human Position</h5>
             <p>Improved acoustic pose estimation robust to varying subject positions within the sensing environment.</p>
@@ -150,18 +140,17 @@
           </div>
           <i class="fas fa-external-link-alt"></i>
         </a>
-        <a href="https://shibatayuto.github.io/bgm2pose/" class="work-item" target="_blank">
+        <a href="https://arxiv.org/abs/2503.00389" class="work-item" target="_blank">
           <div class="work-info">
             <h5>BGM2Pose: Active 3D Human Pose Estimation with Non-Stationary Sounds</h5>
             <p>3D human pose estimation using non-stationary music signals as the active acoustic source.</p>
-            <span class="work-venue">CVPRW 2025</span>
+            <span class="work-venue">OJSP 2026</span>
           </div>
           <i class="fas fa-external-link-alt"></i>
         </a>
       </div>
     </div>
   </div>
-  -->
 
   <main id="main-content">
   <section class="hero">
@@ -169,21 +158,20 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Sound-based Multi-Person 3D Pose Estimation</h1>
+            <h1 class="title is-1 publication-title">Sound-based Multi-Person<br>3D Pose Estimation</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <!-- TODO: Update with personal page URL if available -->
                 <a href="https://oumi03.github.io/" target="_blank">Yusuke Oumi</a><sup>1</sup>,</span>
               <span class="author-block">
-                Yuto Shibata<sup>1</sup>,</span>
+                <a href="https://yutoshibata07.github.io/YutoShibata/" target="_blank">Yuto Shibata</a><sup>1</sup>,</span>
               <span class="author-block">
-                Go Irie<sup>1,2</sup>,</span>
+                <a href="https://www.rs.tus.ac.jp/prmi/" target="_blank">Go Irie</a><sup>1,2</sup>,</span>
               <span class="author-block">
-                Akisato Kimura<sup>3</sup>,</span>
+                <a href="https://akisatok.tech/" target="_blank">Akisato Kimura</a><sup>3</sup>,</span>
               <span class="author-block">
-                Yoshimitsu Aoki<sup>1</sup>,</span>
+                <a href="https://aoki-medialab.jp/home-en/" target="_blank">Yoshimitsu Aoki</a><sup>1</sup>,</span>
               <span class="author-block">
-                Mariko Isogawa<sup>1</sup>
+                <a href="https://isogawa.ics.keio.ac.jp/" target="_blank">Mariko Isogawa</a><sup>1</sup>
               </span>
             </div>
 
@@ -193,8 +181,12 @@
                 <sup>2</sup>Tokyo University of Science &nbsp;&nbsp;
                 <sup>3</sup>NTT, Inc.
               </span>
-              <!-- TODO: Add conference/journal name and year once accepted/published -->
-              <!-- <span class="author-block"><br>Conference Name and Year</span> -->
+            </div>
+
+            <div class="has-text-centered" style="margin-top: 1rem;">
+              <span class="publication-venue" style="font-size: 1.1rem; font-weight: 700; background: linear-gradient(135deg, #dbeafe, #bfdbfe); color: #1e40af; border-left: 4px solid #2563eb; padding: 0.6rem 1.4rem;">
+                ECCV 2026
+              </span>
             </div>
 
             <div class="column has-text-centered">
@@ -285,18 +277,9 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <figure class="image" style="margin-bottom: 1.5rem;">
-          <img src="./static/images/teaser.png" alt="Teaser image" loading="lazy">
-        </figure>
-        <div class="content has-text-justified">
-          <p>
-            We propose SoundMHPE, a sound-based multi-person 3D pose estimation
-            method. Our system adopts an active acoustic sensing approach, where a speaker emits
-            a transmitted signal and the received signal is used for the model input. While existing
-            acoustic pose estimation models are limited to single-person estimation, SoundMHPE
-            enables simultaneous estimation of multiple individuals.
-          </p>
-        </div>
+        <video controls style="width: 100%; border-radius: 12px; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);">
+          <source src="static/videos/ECCV_video.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
   </div>
@@ -310,6 +293,9 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
+        <figure class="image" style="margin-bottom: 2rem;">
+          <img src="./static/images/teaser.png" alt="Teaser image" loading="lazy">
+        </figure>
         <div class="content has-text-justified">
           <p>
             Can we recover the 3D poses of multiple people using only sound?
