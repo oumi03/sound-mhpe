@@ -67,6 +67,7 @@ body {
   box-shadow: var(--shadow-md);
 }
 
+
 .footer .icon-link {
     font-size: 25px;
     color: var(--text-secondary);
